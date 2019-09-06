@@ -21,5 +21,5 @@ Usage:
 ```
 
 ### 参考文档
-https://dev.mysql.com/doc/internals/en/client-server-protocol.html
-https://github.com/mysql/mysql-server/blob/5.5/include/mysql_com.h
+ * https://dev.mysql.com/doc/internals/en/client-server-protocol.html
+ * https://github.com/mysql/mysql-server/blob/5.5/include/mysql_com.h

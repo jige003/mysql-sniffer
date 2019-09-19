@@ -96,3 +96,13 @@ void debug_hex_data( const uint8_t* pkt_data, uint32_t data_len )
     printf( "\n" );
 }
 
+void stripcr(char* src)
+{
+    char* p = src;
+    while (*p++)
+    {
+        if (*p == '\r' || *p == '\n')
+            * p = ' ';
+    }
+    *p = '\0';
+}

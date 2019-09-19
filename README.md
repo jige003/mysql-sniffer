@@ -27,22 +27,16 @@ Usage:
 > x.py 正常query协议测试
 ```
 [*] sniffe on interface: lo
-2019-09-19 15:56:20 127.0.0.1:3306-127.0.0.1:36108 [ greet handshake ] protocal: 10  version: 5.5.59 auth_plugin: mysql_native_password
-2019-09-19 15:56:20 127.0.0.1:36108-127.0.0.1:3306 db: test user: root [ login handshake ] user: root  password: 06c7cc0e529783a2ea85f321a4552fc299e4c69e dbname: test client_auth_plugin: mysql_native_password
-2019-09-19 15:56:20 127.0.0.1:36108-127.0.0.1:3306 db: test user: root [ normal query ] SET NAMES utf8
-2019-09-19 15:56:20 127.0.0.1:36108-127.0.0.1:3306 db: test user: root [ normal query ] set autocommit=0
-2019-09-19 15:56:20 127.0.0.1:36108-127.0.0.1:3306 db: test user: root [ normal query ] SELECT VERSION()
-2019-09-19 15:56:20 127.0.0.1:36108-127.0.0.1:3306 db: test user: root [ normal query ] DROP TABLE IF EXISTS jige003
-2019-09-19 15:56:20 127.0.0.1:36108-127.0.0.1:3306 db: test user: root [ normal query ] CREATE TABLE jige003 (
-         name  CHAR(20) NOT NULL,
-         mail  CHAR(20),
-         age INT
-          )
-2019-09-19 15:56:20 127.0.0.1:36108-127.0.0.1:3306 db: test user: root [ normal query ] INSERT INTO jige003(name,
-         mail, age)
-         VALUES ('jige003', 'jige003@mial.com', 100)
-2019-09-19 15:56:20 127.0.0.1:36108-127.0.0.1:3306 db: test user: root [ normal query ] commit
-2019-09-19 15:56:20 127.0.0.1:36108-127.0.0.1:3306 db: test user: root [ normal query ] select * from jige003 where name = 'jige003'  and age = 100
+2019-09-19 17:13:49 127.0.0.1:3306-127.0.0.1:36436 [ greet handshake ] protocal: 10  version: 5.5.59 auth_plugin: mysql_native_password
+2019-09-19 17:13:49 127.0.0.1:36436-127.0.0.1:3306 db: test user: root [ login handshake ] user: root  password: 78993c4e01c9fc840f42cd7718c00084fd2d93a2 dbname: test client_auth_plugin: mysql_native_password
+2019-09-19 17:13:49 127.0.0.1:36436-127.0.0.1:3306 db: test user: root [ normal query ] SET NAMES utf8
+2019-09-19 17:13:49 127.0.0.1:36436-127.0.0.1:3306 db: test user: root [ normal query ] set autocommit=0
+2019-09-19 17:13:49 127.0.0.1:36436-127.0.0.1:3306 db: test user: root [ normal query ] SELECT VERSION()
+2019-09-19 17:13:49 127.0.0.1:36436-127.0.0.1:3306 db: test user: root [ normal query ] DROP TABLE IF EXISTS jige003
+2019-09-19 17:13:49 127.0.0.1:36436-127.0.0.1:3306 db: test user: root [ normal query ] CREATE TABLE jige003 (          name  CHAR(20) NOT NULL,          mail  CHAR(20),          age INT           )
+2019-09-19 17:13:49 127.0.0.1:36436-127.0.0.1:3306 db: test user: root [ normal query ] INSERT INTO jige003(name,          mail, age)          VALUES ('jige003', 'jige003@mial.com', 100)
+2019-09-19 17:13:49 127.0.0.1:36436-127.0.0.1:3306 db: test user: root [ normal query ] commit
+2019-09-19 17:13:49 127.0.0.1:36436-127.0.0.1:3306 db: test user: root [ normal query ] select * from jige003 where name = 'jige003'  and age = 100
 ```
 
 ### 参考文档

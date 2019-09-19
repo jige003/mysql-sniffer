@@ -162,6 +162,7 @@ void Session::mysql_query_handle( Tunnel & t )
         char *str = NULL;
         str = mysql_query_req_parser( t.pkt_data, t.data_len, &r);
         if (!str ) return;
+        stripcr(str);
         if (r == 1)
         {
             this->state = SESSION_PRE_STMT_RESP;

@@ -24,6 +24,8 @@ char* ts_bin2hex( const unsigned char *old, const size_t oldlen );
 
 void debug_hex_data( const uint8_t* pkt_data, uint32_t data_len );
 
+void stripcr(char* src);
+
 __END_DECLS
 
 #endif

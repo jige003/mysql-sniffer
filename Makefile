@@ -1,25 +1,27 @@
-CC=gcc 
-LDFLAGS= -lpcap  
+CXX = g++
+CC = gcc
+LDFLAGS= -lpcap
 CFLAGS= -Wall -g
-SOURCE= mysql-sniffer.c mysql.c
-OBJS=$(SOURCE:.cc=.o)
-TARGET= mysql-sniffer
-
-.c.o:
-	$(CC) $(CFLAGS) $< -o $@
+CXXFLAGS= -Wall -g -std=c++11
+CSOURCE=$(wildcard ./*.c)
+CXXSOURCE=$(wildcard ./*.cxx)
+COBJS=$(CSOURCE:.c=.o)
+CXXOBJS=$(CXXSOURCE:.cxx=.o)
+TARGET= sniffer
 
 all: release
 
-x:
-	./mysql-sniffer -i lo
+$(COBJS) : %.o : %.c
+	$(CC) -c $< -o $@ $(CFLAGS)
 
-d:
-	jdebug=true ./mysql-sniffer -i lo
+$(CXXOBJS) : %.o: %.cxx
+	$(CXX) -c $< -o $@ $(CXXFLAGS)
 
-release: $(OBJS)
-	$(CC)  -o $(TARGET) $^ $(LDFLAGS)
-
+release: $(COBJS) $(CXXOBJS)
+	$(CXX) -o $(TARGET) $^ $(LDFLAGS)
 
 clean:
-	rm -f  *.o  $(TARGET)
+	rm -f  *.o  $(TARGET) 
 
+d:
+	 jdebug=true ./$(TARGET) -i eth0

@@ -1,4 +1,4 @@
-# mysql-sniffer
+# mysql-sniffer ![GitHub](https://img.shields.io/github/license/jige003/mysql-sniffer)
 > mysql sniffer network traffic 
 
 ### 功能
